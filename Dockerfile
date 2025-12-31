@@ -26,6 +26,12 @@ COPY --chown=user:user . .
 
 ENV PATH="/home/user/.local/bin:${PATH}"
 
+# Instala Gemini CLI (oficial de Google)
+RUN pip install --user --no-cache-dir google-generativeai
+
+# Opcional: alias corto para usar en terminal si abres shell
+RUN echo 'alias gemini="python -m google.generativeai.cli"' >> /home/user/.bashrc
+
 EXPOSE 7860
 
 CMD ["streamlit", "run", "app.py", "--server.port=7860", "--server.address=0.0.0.0"]
