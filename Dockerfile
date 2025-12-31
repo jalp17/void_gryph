@@ -4,14 +4,21 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Instala dependencias sistema
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git wget libgl1 libglib2.0-0 libsm6 libxext6 libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Crea usuario
 RUN useradd -m -u 1000 user
 USER user
 WORKDIR /app
 
+# Instala torch CPU desde index oficial
+RUN pip install --user --no-cache-dir --index-url https://download.pytorch.org/whl/cpu \
+    torch torchvision torchaudio
+
+# Instala el resto (diffusers ahora encuentra torch compatible)
 COPY --chown=user:user requirements.txt .
 RUN pip install --user --no-cache-dir -r requirements.txt
 
