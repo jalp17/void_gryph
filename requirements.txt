@@ -1,0 +1,17 @@
+torch==2.4.1+cpu  # CPU por default
+# torchvision==0.19.1+cpu  # Comenta si da problemas
+diffusers==0.30.3
+transformers==4.45.1
+accelerate==0.33.0
+gradio==4.44
+streamlit==1.38.0
+fastapi
+uvicorn
+numpy
+pandas
+matplotlib
+scipy
+pybullet
+bpy  # Blender as Python module (headless, para simulaciones físicas y scripts)
+label-studio  # Si querés anotación
+jupyterlab  # Opcional para notebooks internos
