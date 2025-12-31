@@ -1,4 +1,13 @@
 import streamlit as st
+import streamlit as st
+from gemini_assistant import ask_gemini
+
+with st.expander("💎 Asistente Gemini (ayuda en código y desarrollo)"):
+    user_question = st.text_input("Preguntale a Gemini sobre código, bugs, mejoras...", placeholder="Explica cómo agregar LoRA a diffusers")
+    if st.button("Consultar Gemini"):
+        with st.spinner("Gemini pensando..."):
+            answer = ask_gemini(f"Eres un experto en Python, diffusers, Gradio y Streamlit. Responde en español: {user_question}")
+            st.markdown(answer)
 
 st.set_page_config(page_title="Multi-Tool AI Lab", layout="wide")
 
