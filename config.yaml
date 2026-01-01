@@ -1,0 +1,17 @@
+title: Multi-Tool AI Lab - Imágenes, Física, Datos & Blender
+emoji: 🚀
+colorFrom: blue
+colorTo: purple
+sdk: docker
+sdk_version: latest
+app_port: 7860
+
+# Pre-carga modelos para que el Space inicie más rápido
+preload_from_hub:
+  - cagliostrolab/animagine-xl-4.0
+  - black-forest-labs/FLUX.1-schnell
+  - SG161222/Realistic_Vision_V5.1_noVAE
+
+# Secrets (agregalos en Settings > Secrets del Space)
+secrets:
+  - HF_TOKEN  # Si necesitás modelos gated

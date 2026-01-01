@@ -1,0 +1,15 @@
+diffusers
+transformers
+accelerate
+gradio
+streamlit
+fastapi
+uvicorn
+numpy
+pandas
+matplotlib
+scipy
+pybullet
+bpy  # Blender as Python module (headless, para simulaciones físicas y scripts)
+label-studio  # Si querés anotación
+jupyterlab  # Opcional para notebooks internos
