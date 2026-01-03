@@ -1,15 +1,21 @@
+# Core
+streamlit
+google-genai
+python-dotenv
+
+# IA & Imágenes
+torch --index-url https://download.pytorch.org/whl/cpu
 diffusers
 transformers
 accelerate
-gradio
-streamlit
-fastapi
-uvicorn
+safetensors
+
+# Datos & Ciencia
 numpy
 pandas
 matplotlib
+seaborn
 scipy
+
+# Física & Otros
 pybullet
-bpy  # Blender as Python module (headless, para simulaciones físicas y scripts)
-label-studio  # Si querés anotación
-jupyterlab  # Opcional para notebooks internos

@@ -1,12 +1,12 @@
 ---
-title: Void Gryph
-emoji: 🏃
+title: Multi-Tool AI Lab - Imágenes, Física, Datos & Blender
+emoji: 🚀
 colorFrom: blue
-colorTo: blue
+colorTo: purple
 sdk: docker
+app_port: 7860
 pinned: false
 license: mit
-short_description: 'Espacio de pruebas para generación de código '
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
